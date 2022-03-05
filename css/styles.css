@@ -1,0 +1,34 @@
+/* this imports font to be used in css, therefore any @font-face rules go at the top of the css  */
+/* 1. when copy and pasting the @font-face ruke, change the relative path to the folder (../fonts/......) 
+2. add font display:swap to avoid flash of invisible font FOIT */
+@font-face {
+    font-family: 'milkshakeregular';
+    src: url('../fonts/milkshake-webfont.woff2') format('woff2'),
+         url('../fonts/milkshake-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* *******************Generic Css****************** */
+/* For small screens give it a generic font so it doesnt not affect the performace */
+h1,
+h2{
+    font-family: sans-serif;
+}
+
+/* move the web font to be used to the media query for larger screens as the performance on these will not be as affected as mobile  */
+
+@media screen and (min-width: 1024px) {
+
+    h1{
+        font-family: 'milkshakeregular';
+        font-size: 3rem;
+    }
+
+    h2{
+        font-family: 'milkshakeregular';
+        font-size: 2.5rem;
+    }
+    
+}
